@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @machine_business.ip %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @machine_business.type %>
+</p>
+
+<p>
+  <strong>Business:</strong>
+  <%= @machine_business.business %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @machine_business.domain %>
+</p>
+
+<%= link_to 'Edit', edit_machine_business_path(@machine_business) %> |
+<%= link_to 'Back', machine_businesses_path %>
