@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @machine_status.ip %>
+</p>
+
+<p>
+  <strong>Cpu usage:</strong>
+  <%= @machine_status.cpu_usage %>
+</p>
+
+<p>
+  <strong>Disk io rate:</strong>
+  <%= @machine_status.disk_io_rate %>
+</p>
+
+<p>
+  <strong>Load:</strong>
+  <%= @machine_status.load %>
+</p>
+
+<p>
+  <strong>Tcp connection:</strong>
+  <%= @machine_status.tcp_connection %>
+</p>
+
+<%= link_to 'Edit', edit_machine_status_path(@machine_status) %> |
+<%= link_to 'Back', machine_statuses_path %>

@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725013159) do
+ActiveRecord::Schema.define(version: 20130725072305) do
 
   create_table "machine_businesses", force: true do |t|
     t.string   "ip"
     t.string   "type"
     t.string   "business"
     t.string   "domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "machine_statuses", force: true do |t|
+    t.string   "ip"
+    t.decimal  "cpu_usage",      precision: 10, scale: 2
+    t.decimal  "disk_io_rate",   precision: 10, scale: 2
+    t.decimal  "load",           precision: 10, scale: 2
+    t.integer  "tcp_connection"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

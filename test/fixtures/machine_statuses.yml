@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ip: MyString
+  cpu_usage: 9.99
+  disk_io_rate: 9.99
+  load: 9.99
+  tcp_connection: 1
+
+two:
+  ip: MyString
+  cpu_usage: 9.99
+  disk_io_rate: 9.99
+  load: 9.99
+  tcp_connection: 1

@@ -1,0 +1,35 @@
+<h1>Listing machine_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Cpu usage</th>
+      <th>Disk io rate</th>
+      <th>Load</th>
+      <th>Tcp connection</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @machine_statuses.each do |machine_status| %>
+      <tr>
+        <td><%= machine_status.ip %></td>
+        <td><%= machine_status.cpu_usage %></td>
+        <td><%= machine_status.disk_io_rate %></td>
+        <td><%= machine_status.load %></td>
+        <td><%= machine_status.tcp_connection %></td>
+        <td><%= link_to 'Show', machine_status %></td>
+        <td><%= link_to 'Edit', edit_machine_status_path(machine_status) %></td>
+        <td><%= link_to 'Destroy', machine_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Machine status', new_machine_status_path %>

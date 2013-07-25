@@ -1,4 +1,6 @@
 Maple::Application.routes.draw do
+  resources :machine_statuses
+
   resources :machine_businesses
 
   # The priority is based upon order of creation: first created -> highest priority.
