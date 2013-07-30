@@ -1,0 +1,33 @@
+<%= form_for(@client_error) do |f| %>
+  <% if @client_error.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client_error.errors.count, "error") %> prohibited this client_error from being saved:</h2>
+
+      <ul>
+      <% @client_error.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :business %><br>
+    <%= f.text_field :business %>
+  </div>
+  <div class="field">
+    <%= f.label :errors %><br>
+    <%= f.number_field :errors %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br>
+    <%= f.text_area :detail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

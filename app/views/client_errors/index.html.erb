@@ -1,0 +1,33 @@
+<h1>Listing client_errors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Business</th>
+      <th>Errors</th>
+      <th>Time</th>
+      <th>Detail</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_errors.each do |client_error| %>
+      <tr>
+        <td><%= client_error.business %></td>
+        <td><%= client_error.errors %></td>
+        <td><%= client_error.time %></td>
+        <td><%= client_error.detail %></td>
+        <td><%= link_to 'Show', client_error %></td>
+        <td><%= link_to 'Edit', edit_client_error_path(client_error) %></td>
+        <td><%= link_to 'Destroy', client_error, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client error', new_client_error_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  business: MyString
+  errors: 1
+  time: 2013-07-25 17:35:09
+  detail: MyText
+
+two:
+  business: MyString
+  errors: 1
+  time: 2013-07-25 17:35:09
+  detail: MyText

@@ -1,4 +1,6 @@
 Maple::Application.routes.draw do
+  resources :client_errors
+
   resources :machine_errors
 
   resources :machine_statuses
