@@ -1,0 +1,37 @@
+<%= form_for(@machine_error) do |f| %>
+  <% if @machine_error.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@machine_error.errors.count, "error") %> prohibited this machine_error from being saved:</h2>
+
+      <ul>
+      <% @machine_error.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :machine_business_id %><br>
+    <%= f.number_field :machine_business_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pv %><br>
+    <%= f.number_field :pv %>
+  </div>
+  <div class="field">
+    <%= f.label :error %><br>
+    <%= f.number_field :error %>
+  </div>
+  <div class="field">
+    <%= f.label :error_type %><br>
+    <%= f.text_field :error_type %>
+  </div>
+  <div class="field">
+    <%= f.label :on_date %><br>
+    <%= f.date_select :on_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

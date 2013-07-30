@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Machine business:</strong>
+  <%= @machine_error.machine_business_id %>
+</p>
+
+<p>
+  <strong>Pv:</strong>
+  <%= @machine_error.pv %>
+</p>
+
+<p>
+  <strong>Error:</strong>
+  <%= @machine_error.error %>
+</p>
+
+<p>
+  <strong>Error type:</strong>
+  <%= @machine_error.error_type %>
+</p>
+
+<p>
+  <strong>On date:</strong>
+  <%= @machine_error.on_date %>
+</p>
+
+<%= link_to 'Edit', edit_machine_error_path(@machine_error) %> |
+<%= link_to 'Back', machine_errors_path %>

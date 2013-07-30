@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725072305) do
+ActiveRecord::Schema.define(version: 20130730021502) do
 
   create_table "machine_businesses", force: true do |t|
     t.string   "ip"
     t.string   "type"
     t.string   "business"
     t.string   "domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "machine_errors", force: true do |t|
+    t.integer  "machine_business_id"
+    t.integer  "pv"
+    t.integer  "error"
+    t.string   "error_type"
+    t.date     "on_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  machine_business_id: 1
+  pv: 1
+  error: 1
+  error_type: MyString
+  on_date: 2013-07-30
+
+two:
+  machine_business_id: 1
+  pv: 1
+  error: 1
+  error_type: MyString
+  on_date: 2013-07-30

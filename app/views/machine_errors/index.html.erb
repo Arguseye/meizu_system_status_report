@@ -1,0 +1,35 @@
+<h1>Listing machine_errors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Machine business</th>
+      <th>Pv</th>
+      <th>Error</th>
+      <th>Error type</th>
+      <th>On date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @machine_errors.each do |machine_error| %>
+      <tr>
+        <td><%= machine_error.machine_business_id %></td>
+        <td><%= machine_error.pv %></td>
+        <td><%= machine_error.error %></td>
+        <td><%= machine_error.error_type %></td>
+        <td><%= machine_error.on_date %></td>
+        <td><%= link_to 'Show', machine_error %></td>
+        <td><%= link_to 'Edit', edit_machine_error_path(machine_error) %></td>
+        <td><%= link_to 'Destroy', machine_error, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Machine error', new_machine_error_path %>
