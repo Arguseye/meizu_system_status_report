@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130730021840) do
+ActiveRecord::Schema.define(version: 20130731085229) do
 
   create_table "businesses", force: true do |t|
     t.string   "name"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20130730021840) do
 
   create_table "machine_businesses", force: true do |t|
     t.string   "ip"
-    t.string   "type"
-    t.string   "business"
+    t.string   "machine_type"
+    t.integer  "business_id"
     t.string   "domain"
     t.datetime "created_at"
     t.datetime "updated_at"
