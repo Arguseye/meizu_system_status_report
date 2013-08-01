@@ -1,0 +1,17 @@
+<h4 class="title">
+  服务列表:
+</h4>
+<%if @machine_businesses%>
+  <ul class="thumbnails business-list">
+    <% @machine_businesses.each do |machine|%>
+      <div>
+        <li class= "span2">
+          <%= link_to image_tag("/assets/#{machine.business.image_url}"), "/machine_businesses/#",:class => "thumbnail"%>
+          <div class= "caption">
+            <h5><%=machine.business.title%></h5>
+          </div>
+        </li>
+      </div>
+    <%-end%>
+  </ul>
+<%-end%>

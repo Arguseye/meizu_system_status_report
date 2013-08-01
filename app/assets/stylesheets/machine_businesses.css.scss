@@ -1,3 +1,35 @@
 // Place all the styles related to the machine_businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.business-list{
+    text-align:center;
+    padding: 0;
+    margin: 0 0 10px 25px;
+    width:100%;
+    min-width:300px;
+}
+
+#businesses .business-list li{
+    margin-left:80px;
+    width: 300px;
+    margin-top:50px;
+
+}
+
+#businesses .business-list li a{
+  &:hover{
+    background-color:#ffffff;
+  }
+}
+
+.business-list img{
+    width:240px;
+    height:240px;
+}
+
+#businesses .title {
+    margin-left:50px;
+    width:93%;
+    border-bottom: 2px solid #e5e5e5;
+}

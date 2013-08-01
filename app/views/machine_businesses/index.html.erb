@@ -1,33 +1,3 @@
-<h1>Listing machine_businesses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Ip</th>
-      <th>Type</th>
-      <th>Business</th>
-      <th>Domain</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @machine_businesses.each do |machine_business| %>
-      <tr>
-        <td><%= machine_business.ip %></td>
-        <td><%= machine_business.type %></td>
-        <td><%= machine_business.business %></td>
-        <td><%= machine_business.domain %></td>
-        <td><%= link_to 'Show', machine_business %></td>
-        <td><%= link_to 'Edit', edit_machine_business_path(machine_business) %></td>
-        <td><%= link_to 'Destroy', machine_business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Machine business', new_machine_business_path %>
+<div class ="row-fluid" id="businesses">
+  <%= render :partial => "list"%>
+</div>
